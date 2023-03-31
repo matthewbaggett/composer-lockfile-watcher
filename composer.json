@@ -16,11 +16,9 @@
     "require": {
         "php": ">=8.0",
         "composer-plugin-api": "^2.0",
-        "kint-php/kint": ">=5.0.5"
     },
     "require-dev": {
-        "composer/composer": "^2.0",
-        "kint-php/kint": ">=5.0.5"
+        "composer/composer": "^2.0"
     },
     "extra": {
         "class": "ComposerWatcher\\Plugin",
