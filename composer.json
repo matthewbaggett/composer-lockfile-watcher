@@ -1,0 +1,29 @@
+{
+    "name": "matthewbaggett/composer-lock-watcher",
+    "description": "Watch composer.lock for changes, run composer install when it sees them.",
+    "type": "composer-plugin",
+    "autoload": {
+        "psr-4": {
+            "ComposerWatcher\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matthew Baggett",
+            "email": "matthew@baggett.me"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "composer-plugin-api": "^2.0",
+        "kint-php/kint": ">=5.0.5"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0",
+        "kint-php/kint": ">=5.0.5"
+    },
+    "extra": {
+        "class": "ComposerWatcher\\Plugin",
+        "plugin-optional": true
+    }
+}
