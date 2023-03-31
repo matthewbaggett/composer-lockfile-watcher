@@ -38,6 +38,7 @@ class WatchCommand extends BaseCommand
             while ($md5 == md5_file($lockFile)) {
                 sleep(self::CHECK_INTERVAL_SECONDS);
             }
+            $this->writeln("A change has been detected in $lockFile. Running composer install.");
             $this->getApplication()->doRun(new StringInput("install"), $output);
         }
 
