@@ -23,6 +23,7 @@ class WatchCommand extends BaseCommand
             $output->writeln("Can't find composer.lock");
             return 1;
         }
+        $output->writeln("Found composer.lock, watching for changes...");
 
         // This solution requires chokidar and that depends on npm and friends...
         #Watch::path($lockFile)->onAnyChange(function(string $type, string $path) use ($output){
